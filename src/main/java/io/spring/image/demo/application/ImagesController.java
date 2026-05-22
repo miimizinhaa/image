@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/image")
+@RequestMapping("/images")
 @Slf4j
 @RequiredArgsConstructor
 public class ImagesController {
@@ -63,7 +63,9 @@ public class ImagesController {
             @RequestParam(value = "extension",required = false, defaultValue = "")String extension,
             @RequestParam(value = "query", required = false)String query) throws InterruptedException{
             Thread.sleep(3000L);
-            var result = service.search(ImageExtension.valueOf(extension), query);
+            //var result = service.search(ImageExtension.valueOf(extension), query);
+
+            var result = service.search(ImageExtension.ofName(extension), query);
             var images = result.stream().map(image -> {
                 var url = buildImageURL(image);
                 return mapper.imageToDTO(image,url.toString());
