@@ -1,8 +1,12 @@
+import { Template } from "../components/Template"
+
 export default function Fotos() {
   return(
     <div>
     <main>
-      <h1>Fotos</h1>
+      <Template>
+        <h1>Fotos</h1>
+      </Template>
     </main>
     </div>
   )
