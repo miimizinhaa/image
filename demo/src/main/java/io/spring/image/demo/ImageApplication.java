@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class ImageApplication {
+public class 	ImageApplication {
 
 //	@Bean
 //	public CommandLineRunner commandLineRunner(@Autowired ImageRepository repository){

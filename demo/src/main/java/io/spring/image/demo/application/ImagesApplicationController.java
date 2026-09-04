@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/images")
 @Slf4j
 @RequiredArgsConstructor
-public class ImagesController {
+public class ImagesApplicationController {
 
     private final ImageService service;
     private final ImageMapper mapper;
