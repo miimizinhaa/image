@@ -1,5 +1,5 @@
 import { Image } from "./image";
-class ImageService {
+export class ImageService {
   baseURL: string = 'http://localhost:8080/image';
 
   async buscar(): Promise<Image[]> {
@@ -9,4 +9,4 @@ class ImageService {
   }
 }
 //React Hook 
-export const useImage = () => new ImageService();
+export const useImageService = () => new ImageService();
